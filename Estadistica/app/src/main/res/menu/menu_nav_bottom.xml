@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_registro"
+        android:icon="@mipmap/baseline_save_black_18dp"
+        android:title="@string/registro" />
+    <item
+        android:id="@+id/menu_tablas"
+        android:icon="@mipmap/baseline_list_alt_black_18dp"
+        android:title="@string/tablas" />
+    <item
+        android:id="@+id/menu_graficas"
+        android:icon="@mipmap/baseline_equalizer_black_18dp"
+        android:title="@string/graficas" />
+    <item
+        android:id="@+id/menu_medidas"
+        android:icon="@mipmap/baseline_done_black_18dp"
+        android:title="@string/medidas" />
+</menu>

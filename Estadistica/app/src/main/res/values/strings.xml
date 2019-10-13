@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Estadistica</string>
+    <string name="registro">Registro</string>
+    <string name="tablas">Tablas</string>
+    <string name="graficas">Graficas</string>
+    <string name="medidas">Medidas</string>
+</resources>
