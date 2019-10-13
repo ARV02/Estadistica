@@ -5,20 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.estadistica.Fragments.GraficasFragment;
-import com.example.estadistica.Fragments.MedidasFragment;
-import com.example.estadistica.Fragments.RegistroFragment;
-import com.example.estadistica.Fragments.TablasFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     BottomNavigationView mBottomNavigationView;
+    Intent inte;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mBottomNavigationView=findViewById(R.id.nav_view);
@@ -26,13 +24,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 if (menuItem.getItemId() == R.id.menu_registro){
-                    showSelectedFragment(new RegistroFragment());
+                    inte=new Intent(mBottomNavigationView.getContext(),Regis.class);
+                    startActivity(inte);
+                    //showSelectedFragment(new RegistroFragment());
                 }if (menuItem.getItemId() == R.id.menu_tablas){
-                    showSelectedFragment(new TablasFragment());
+                    inte=new Intent(mBottomNavigationView.getContext(),Tablas.class);
+                    startActivity(inte);
+                    //showSelectedFragment(new TablasFragment());
                 }if(menuItem.getItemId() == R.id.menu_graficas){
-                    showSelectedFragment(new GraficasFragment());
+                   // inte = new Intent(mBottomNavigationView.getContext(), Graficas.class);
+                    //startActivity(inte);
+                    //showSelectedFragment(new GraficasFragment());
                 }if (menuItem.getItemId() == R.id.menu_medidas){
-                    showSelectedFragment(new MedidasFragment());
+                    inte = new Intent(mBottomNavigationView.getContext(),Medidas.class);
+                    startActivity(inte);
+                    //showSelectedFragment(new MedidasFragment());
                 }
                 return true;
             }
@@ -43,4 +49,5 @@ public class MainActivity extends AppCompatActivity {
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                 .commit();
     }
+
 }
