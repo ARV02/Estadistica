@@ -9,10 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.estadistica.Fragments.GraficasFragment;
-import com.example.estadistica.Fragments.MedidasFragment;
 import com.example.estadistica.Fragments.RegistroFragment;
-import com.example.estadistica.Fragments.TablasFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,15 +31,15 @@ public class MainActivity extends AppCompatActivity {
                 }if (menuItem.getItemId() == R.id.menu_tablas){
                     //inte=new Intent(mBottomNavigationView.getContext(),Tablas.class);
                     //startActivity(inte);
-                    showSelectedFragment(new TablasFragment());
+                    //showSelectedFragment(new TablasFragment());
                 }if(menuItem.getItemId() == R.id.menu_graficas){
                    // inte = new Intent(mBottomNavigationView.getContext(), Graficas.class);
                     //startActivity(inte);
-                    showSelectedFragment(new GraficasFragment());
+                    //showSelectedFragment(new GraficasFragment());
                 }if (menuItem.getItemId() == R.id.menu_medidas){
                     //inte = new Intent(mBottomNavigationView.getContext(),Medidas.class);
                     //startActivity(inte);
-                    showSelectedFragment(new MedidasFragment());
+                    //showSelectedFragment(new MedidasFragment());
                 }
                 return true;
             }

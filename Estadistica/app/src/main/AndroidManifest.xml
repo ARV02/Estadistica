@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Layouts.Gra"></activity>
-        <activity android:name=".Medidas" />
-        <activity android:name=".Tablas" />
-        <activity android:name=".Regis" />
         <activity android:name=".Layouts.RegistroActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
