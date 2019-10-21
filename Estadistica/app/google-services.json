@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "846019334126",
+    "firebase_url": "https://estadistica-3c3bc.firebaseio.com",
+    "project_id": "estadistica-3c3bc",
+    "storage_bucket": "estadistica-3c3bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846019334126:android:52dbd1120f393b1bf8c8ff",
+        "android_client_info": {
+          "package_name": "com.example.estadistica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846019334126-8auhjqquqoq5a51gptois897hnfd6t8p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.estadistica",
+            "certificate_hash": "2da303cc1353498097d6530a6d744d7b6900410b"
+          }
+        },
+        {
+          "client_id": "846019334126-es0h5jaljlij1fiq2qsmved66bbq9ve5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLCR4PaO9UZ41wH2BzqLqG5aCTYoE7UL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846019334126-es0h5jaljlij1fiq2qsmved66bbq9ve5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

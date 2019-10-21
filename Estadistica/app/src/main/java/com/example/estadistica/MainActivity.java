@@ -9,11 +9,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.estadistica.Fragments.RegistroFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-    BottomNavigationView mBottomNavigationView;
+    private BottomNavigationView mBottomNavigationView;
     Intent inte;
 
     @Override
@@ -28,18 +27,18 @@ public class MainActivity extends AppCompatActivity {
                     //inte=new Intent(mBottomNavigationView.getContext(),Regis.class);
                     //startActivity(inte);
                     showSelectedFragment(new RegistroFragment());
-                }if (menuItem.getItemId() == R.id.menu_tablas){
+                }else if (menuItem.getItemId() == R.id.menu_tablas){
                     //inte=new Intent(mBottomNavigationView.getContext(),Tablas.class);
                     //startActivity(inte);
-                    //showSelectedFragment(new TablasFragment());
-                }if(menuItem.getItemId() == R.id.menu_graficas){
+                    showSelectedFragment(new TablaFragment());
+                }else if(menuItem.getItemId() == R.id.menu_graficas){
                    // inte = new Intent(mBottomNavigationView.getContext(), Graficas.class);
                     //startActivity(inte);
                     //showSelectedFragment(new GraficasFragment());
-                }if (menuItem.getItemId() == R.id.menu_medidas){
+                }else if (menuItem.getItemId() == R.id.menu_medidas){
                     //inte = new Intent(mBottomNavigationView.getContext(),Medidas.class);
                     //startActivity(inte);
-                    //showSelectedFragment(new MedidasFragment());
+                    showSelectedFragment(new MedidasFragment());
                 }
                 return true;
             }
@@ -50,5 +49,4 @@ public class MainActivity extends AppCompatActivity {
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                 .commit();
     }
-
 }

@@ -1,4 +1,4 @@
-package com.example.estadistica.Fragments;
+package com.example.estadistica;
 
 
 import android.content.ContentValues;
@@ -22,7 +22,7 @@ import com.example.estadistica.R;
  */
 public class RegistroFragment extends Fragment {
     private Button Guardar;
-    private EditText nombre,edad,peso,estatura;
+    private EditText nombre, edad, peso, estatura;
 
 
     public RegistroFragment() {
@@ -34,11 +34,12 @@ public class RegistroFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView=inflater.inflate(R.layout.fragment_registro,container,false);
+        View rootView = inflater.inflate(R.layout.fragment_registro, container, false);
         Registrar(rootView);
         return rootView;
     }
-    public void Registrar(View v){
+
+    public void Registrar(View v) {
         Guardar=v.findViewById(R.id.button);
         nombre=v.findViewById(R.id.editText);
         edad=v.findViewById(R.id.editText2);
@@ -60,8 +61,12 @@ public class RegistroFragment extends Fragment {
                     regis.put("peso",pes);
                     regis.put("estatura",est);
                     BaseDeDatos.insert("datos",null,regis);
-                    Limpiar();
+                    double p=Double.parseDouble(peso.getText().toString());
+                    double e=Double.parseDouble(estatura.getText().toString());
+                    double IMC=p/e;
+                    Toast.makeText(getActivity(),"Su IMC es de: "+IMC,Toast.LENGTH_LONG).show();
                     BaseDeDatos.close();
+                    Limpiar();
                     Toast.makeText(getActivity(),"Los datos se han guardado con exito",Toast.LENGTH_LONG).show();
 
                 }else{
@@ -76,5 +81,4 @@ public class RegistroFragment extends Fragment {
         peso.setText("");
         estatura.setText("");
     }
-
 }
